@@ -20,7 +20,7 @@ Nothing special to do.
 
 Add `StoreService` to your providers:
 
-```
+```es6
 ...
 import { StoreService } from 'ng2-storeservice';
 
@@ -53,7 +53,7 @@ Nothing to change here
 
 This is how your service should looks like:
 
-```
+```es6
 import { Injectable } from '@angular/core';
 import { StoreService } from '../../shared/services';
 import { ADD_TODO, CHECK_TODO } from './todos.reducer';
@@ -84,13 +84,13 @@ There is automatic integration with ImmutableJS. If your object is Immutable, it
 
 Example:
 
-```
+```es6
 this.store.retrieve('path.to.part.of.your.state');
 ```
 
 Signature:
 
-```
+```es6
 retrieve(path: String): Observable
 ```
 
@@ -100,13 +100,13 @@ This is simply a wrapper over ngrx's dispatch.
 
 Example:
 
-```
+```es6
 this.store.dispatch(ADD_TODO, { id: 1, value: 'Foo', checked: false });
 ```
 
 Signature:
 
-```
+```es6
 dispatch(type: any, payload: Object): void
 ```
 
