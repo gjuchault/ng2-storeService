@@ -1,6 +1,6 @@
 {
   "name": "ng2-storeservice",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "StoreService to use ngrx with ease and even more performance and respecting Angular2 philosophy.",
   "main": "index.ts",
   "scripts": {
