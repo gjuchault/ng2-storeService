@@ -13,6 +13,7 @@
     "files": [
         "typings/globals/object-path/index.d.ts",
         "typings/globals/es6-shim/index.d.ts",
-        "store.service.ts"
+        "src/store.service.ts",
+        "src/index.ts"
     ]
 }
