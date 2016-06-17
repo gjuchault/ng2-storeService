@@ -1,0 +1,38 @@
+{
+  "name": "ng2-storeservice",
+  "version": "0.0.1",
+  "description": "StoreService to use ngrx with ease and even more performance and respecting Angular2 philosophy.",
+  "main": "store.service.js",
+  "scripts": {
+    "build": "tsc -p ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gjuchault/ng2-storeService.git"
+  },
+  "keywords": [
+    "angular",
+    "angular2",
+    "ng2",
+    "store",
+    "ngrx",
+    "redux",
+    "store"
+  ],
+  "author": "Gabriel Juchault <gabriel.juchault@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gjuchault/ng2-storeService/issues"
+  },
+  "homepage": "https://github.com/gjuchault/ng2-storeService#readme",
+  "dependencies": {
+    "@angular/core": "2.0.0-rc.1",
+    "@ngrx/core": "^1.0.0",
+    "@ngrx/store": "^2.0.0",
+    "object-path": "^0.9.2",
+    "rxjs": "^5.0.0-beta.6"
+  },
+  "devDependencies": {
+    "typescript": "^1.8.10"
+  }
+}
