@@ -1,6 +1,6 @@
 # ng2-storeService
 
-StoreService to use ngrx with ease and even more performance and respecting Angular2 philosophy.
+StoreService to use ngrx + Immutable with ease and respecting Angular2 philosophy.
 
 ## Installation
 
@@ -80,8 +80,7 @@ Then you will have functions that can either retrieve data from the store, or af
 
 ### Retrieving
 
-Advantage over what you do on ngrx: select through nested store. Even more performance!
-There is also automatic integration with ImmutableJS. If your object is Immutable, it will `.toJS()` it!
+There is automatic integration with ImmutableJS. If your object is Immutable, it will `.toJS()` it.
 
 Example:
 

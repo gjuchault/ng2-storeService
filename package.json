@@ -1,7 +1,7 @@
 {
   "name": "ng2-storeservice",
-  "version": "0.0.7",
-  "description": "StoreService to use ngrx with ease and even more performance and respecting Angular2 philosophy.",
+  "version": "0.0.8",
+  "description": "StoreService to use ngrx + Immutable with ease and respecting Angular2 philosophy.",
   "main": "index.ts",
   "scripts": {
     "build": "tsc -p ."
@@ -16,6 +16,7 @@
     "ng2",
     "store",
     "ngrx",
+    "immutable",
     "redux",
     "store"
   ],
