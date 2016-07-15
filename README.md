@@ -90,7 +90,7 @@ this.store.retrieve('path.to.part.of.your.state');
 
 Signature:
 
-```
+```ts
 retrieve(path: String): Observable
 ```
 
@@ -106,7 +106,7 @@ this.store.dispatch(ADD_TODO, { id: 1, value: 'Foo', checked: false });
 
 Signature:
 
-```
+```ts
 dispatch(type: any, payload: Object): void
 ```
 
@@ -122,7 +122,7 @@ this.store.setTransformFunction(obj => obj.toJS());
 
 Signature:
 
-```
+```ts
 setTransformFunction(callback: Function): void
 ```
 
