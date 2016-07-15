@@ -5,12 +5,17 @@ import { get } from 'object-path';
 
 @Injectable()
 export class StoreService {
-    storeModule: string
-    path       : Array<string>
+    private storeModule: string;
+    private path       : Array<string>;
+    private transform  : Function = (obj) => obj;
 
     constructor(public store: Store<any>) {}
 
-    retrieve(path: string): Observable<any> {
+    public setTransformFunction(transformer: Function): void {
+        this.transform = transformer;
+    }
+
+    public retrieve(path: string): Observable<any> {
         const splittedPath = path.split('.');
         const storeModule  = splittedPath.shift();
         const restPath     = splittedPath;
@@ -23,7 +28,7 @@ export class StoreService {
                         return;
                     }
 
-                    const obj    = r.toJS ? r.toJS() : r;
+                    const obj    = this.transform(r);
                     const target = get(obj, restPath);
 
                     observer.next(target);
@@ -31,7 +36,7 @@ export class StoreService {
         });
     }
 
-    dispatch(type: any, payload: Object): void {
+    public dispatch(type: any, payload: Object): void {
         this.store.dispatch({ type, payload });
     }
 }

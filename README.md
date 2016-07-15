@@ -20,7 +20,7 @@ Nothing special to do.
 
 Add `StoreService` to your providers:
 
-```
+```ts
 ...
 import { StoreService } from 'ng2-storeservice';
 
@@ -53,7 +53,7 @@ Nothing to change here
 
 This is how your service should looks like:
 
-```
+```ts
 import { Injectable } from '@angular/core';
 import { StoreService } from '../../shared/services';
 import { ADD_TODO, CHECK_TODO } from './todos.reducer';
@@ -84,7 +84,7 @@ There is automatic integration with ImmutableJS. If your object is Immutable, it
 
 Example:
 
-```
+```ts
 this.store.retrieve('path.to.part.of.your.state');
 ```
 
@@ -100,7 +100,7 @@ This is simply a wrapper over ngrx's dispatch.
 
 Example:
 
-```
+```ts
 this.store.dispatch(ADD_TODO, { id: 1, value: 'Foo', checked: false });
 ```
 
@@ -108,6 +108,22 @@ Signature:
 
 ```
 dispatch(type: any, payload: Object): void
+```
+
+### Usage with Immutable structures
+
+If you use Immutable structures, you might use the `setTransformFunction` that will be called on the first object retrieved (the store module). Must-have if you use any Immutable library.
+
+Example with Immutable.JS:
+
+```ts
+this.store.setTransformFunction(obj => obj.toJS());
+```
+
+Signature:
+
+```
+setTransformFunction(callback: Function): void
 ```
 
 ## License
