@@ -117,13 +117,13 @@ If you use Immutable structures, you might use the `setTransformFunction` that w
 Example with Immutable.JS:
 
 ```ts
-this.store.setTransformFunction(obj => obj.toJS());
+StoreService.setTransformFunction(obj => obj.toJS());
 ```
 
 Signature:
 
 ```ts
-setTransformFunction(callback: Function): void
+static setTransformFunction(callback: Function): void
 ```
 
 ## License

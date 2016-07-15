@@ -3,16 +3,17 @@ import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { get } from 'object-path';
 
+let transform: Function = (obj) => obj;
+
 @Injectable()
 export class StoreService {
     private storeModule: string;
     private path       : Array<string>;
-    private transform  : Function = (obj) => obj;
 
     constructor(public store: Store<any>) {}
 
-    public setTransformFunction(transformer: Function): void {
-        this.transform = transformer;
+    public static setTransformFunction(transformer: Function): void {
+        transform = transformer;
     }
 
     public retrieve(path: string): Observable<any> {
@@ -28,7 +29,7 @@ export class StoreService {
                         return;
                     }
 
-                    const obj    = this.transform(r);
+                    const obj    = transform(r);
                     const target = get(obj, restPath);
 
                     observer.next(target);
