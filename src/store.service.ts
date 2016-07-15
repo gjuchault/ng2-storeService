@@ -26,9 +26,7 @@ export class StoreService {
                     const obj    = r.toJS ? r.toJS() : r;
                     const target = get(obj, restPath);
 
-                    if (target) {
-                        observer.next(target);
-                    }
+                    observer.next(target);
                 });
         });
     }
