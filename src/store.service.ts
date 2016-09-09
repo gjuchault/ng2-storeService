@@ -3,7 +3,9 @@ import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { get } from 'object-path';
 
-let transform: Function = (obj) => obj;
+type Transformer = (obj: any) => any;
+
+let transform: Transformer = (obj) => obj;
 
 @Injectable()
 export class StoreService {
@@ -12,7 +14,7 @@ export class StoreService {
 
     constructor(public store: Store<any>) {}
 
-    public static setTransformFunction(transformer: Function): void {
+    public static setTransformFunction(transformer: Transformer): void {
         transform = transformer;
     }
 
@@ -37,7 +39,7 @@ export class StoreService {
         });
     }
 
-    public dispatch(type: any, payload: Object): void {
+    public dispatch(type: any, payload: any): void {
         this.store.dispatch({ type, payload });
     }
 }
