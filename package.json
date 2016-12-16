@@ -4,7 +4,7 @@
   "description": "StoreService to use ngrx + Immutable with ease and respecting Angular2 philosophy.",
   "main": "index.ts",
   "scripts": {
-    "build": "tsc -p ."
+    "build": "typings install && tsc -p ."
   },
   "repository": {
     "type": "git",
@@ -27,13 +27,14 @@
   },
   "homepage": "https://github.com/gjuchault/ng2-storeService#readme",
   "dependencies": {
-    "@angular/core": "2.0.0",
+    "@angular/core": "^2.3.1",
     "@ngrx/core": "^1.2.0",
     "@ngrx/store": "^2.1.2",
     "object-path": "^0.11.2",
     "rxjs": "^5.0.0-beta.11"
   },
   "devDependencies": {
-    "typescript": "^1.8.10"
+    "typescript": "^2.1.4",
+    "typings": "^2.0.0"
   }
 }

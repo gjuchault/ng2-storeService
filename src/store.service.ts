@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { get } from 'object-path';
 
-type Transformer = (obj: any) => any;
+export type Transformer = (obj: any) => any;
 
 let transform: Transformer = (obj) => obj;
 

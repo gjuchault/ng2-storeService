@@ -1,1 +1,1 @@
-export * from './lib/index.d.ts';
+export * from './lib';
