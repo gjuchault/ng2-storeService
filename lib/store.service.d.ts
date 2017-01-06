@@ -7,6 +7,6 @@ export declare class StoreService {
     private path;
     constructor(store: Store<any>);
     static setTransformFunction(transformer: Transformer): void;
-    retrieve(path: string): Observable<any>;
+    retrieve<T>(path: string): Observable<T>;
     dispatch(type: any, payload: any): void;
 }

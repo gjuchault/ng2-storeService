@@ -18,7 +18,7 @@ export class StoreService {
         transform = transformer;
     }
 
-    public retrieve(path: string): Observable<any> {
+    public retrieve<T>(path: string): Observable<T> {
         const splittedPath = path.split('.');
         const storeModule  = splittedPath.shift();
         const restPath     = splittedPath;
